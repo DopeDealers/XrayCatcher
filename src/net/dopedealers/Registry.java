@@ -46,7 +46,6 @@ implements Listener
         this.getCommand("alerts").setExecutor((CommandExecutor)new AlertsCommand(this));
 
         this.mainConfig.setDefault("xrayduration", 30);
-        this.mainConfig.setDefault("SilenceDay", false);
 
         }
 
