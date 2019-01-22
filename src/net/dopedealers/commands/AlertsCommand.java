@@ -9,10 +9,10 @@ import org.bukkit.entity.Player;
 
 public class AlertsCommand implements CommandExecutor
 {
-    private Registry silence;
+    private Registry ac;
 
-    public AlertsCommand(final Registry silence) {
-        this.silence = silence;
+    public AlertsCommand(final Registry ac) {
+        this.ac = ac;
     }
 
     public boolean onCommand(final CommandSender sender, final Command command, final String alias, final String[] args) {
@@ -25,12 +25,12 @@ public class AlertsCommand implements CommandExecutor
             sender.sendMessage(String.valueOf(C.Red) + "No permission.");
             return true;
         }
-        if (this.silence.hasAlertsOn(player)) {
-            this.silence.toggleAlerts(player);
+        if (this.ac.hasAlertsOn(player)) {
+            this.ac.toggleAlerts(player);
             player.sendMessage(String.valueOf(Registry.Instance.PREFIX) + "Alerts toggled " + C.Red + "OFF");
         }
         else {
-            this.silence.toggleAlerts(player);
+            this.ac.toggleAlerts(player);
             player.sendMessage(String.valueOf(Registry.Instance.PREFIX) + "Alerts toggled " + C.Green + "ON");
         }
         return true;
