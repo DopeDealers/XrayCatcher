@@ -1,0 +1,19 @@
+name: XC
+main: net.dopedealers.Registry
+authors: DopeDealers
+version: 1.0.0-NONALPHA
+load: STARTUP
+depend: [ProtocolLib]
+
+commands:
+  alerts:
+    description: 'Toggles off and on alerts'
+    usage: '/alerts'
+  xray:
+permissions:
+  ac.staff:
+    description: Gives access to staff
+    default: op
+  ac.admin:
+    description: Gives access to admin
+    default: op
